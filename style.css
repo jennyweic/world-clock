@@ -37,7 +37,7 @@ select {
   width: 72%;
   border-radius: 10px;
   background-color: #009999;
-  border-color: #009999;
+  border: 1px solid #009999;
   color: white;
 }
 
