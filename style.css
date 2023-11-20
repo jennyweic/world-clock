@@ -114,6 +114,9 @@ a:hover {
     line-height: 15px;
     vertical-align: middle;
     flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
   }
 
   .individual-city,
