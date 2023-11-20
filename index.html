@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
 </head>
 <body>
@@ -20,16 +22,16 @@
         <option value ="norway">Norway</option>
       </select>
 
-<div class="individual-city">
-  <div class="left-box">
+<div class="individual-city" id="london-city">
+  <div>
     <h2>London 🇬🇧</h2>
-    <div class="date">20 November 2023</div>
+    <div class="date"></div>
   </div>
-    <div class="time">09:50  
-      <span> AM</span></div>
+    <div class="time">  
+      <span></span></div>
 </div>
 
-<div class="individual-city">
+<div class="individual-city" id="hk-city">
     <div class="left-box">
   <h2>Hong Kong 🇭🇰</h2>
   <div class="date">20 November 2023</div>
@@ -38,7 +40,7 @@
     <span>PM</span></div>
 </div>
 
-<div class="individual-city">
+<div class="individual-city" id="indonesia-city">
   <div class="left-box">
     <h2>Indonesia 🇮🇩</h2>
   <div class="date">20 November 2023</div>
@@ -47,7 +49,7 @@
     <span>PM</span></div>
 </div>
 
-<div class="individual-city">
+<div class="individual-city" id="portugal-city">
     <div class="left-box">
   <h2>Portugual 🇵🇹</h2>
   <div class="date">20 November 2023</div>
@@ -56,7 +58,7 @@
     <span>AM</span></div>
 </div>
 
-<div class="individual-city">
+<div class="individual-city" id="norway-city">
     <div class="left-box">
   <h2>Norway 🇳🇴</h2>
   <div class="date">20 November 2023</div>
