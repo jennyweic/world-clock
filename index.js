@@ -57,48 +57,19 @@ function updateCity(event) {
   event.preventDefault;
   let cityTimeZone = event.target.value;
   console.log(cityTimeZone);
-  let cityTime = moment().tz("cityTimeZone");
+  let cityTime = moment().tz(cityTimeZone);
   console.log(cityTime.format("dddd Do MMMM YYYY"));
 
-  let citiesElement = document.querySelector("#cities");
+  let citiesElement = document.querySelector(".cities");
   citiesElement.innerHTML = `
-<div class="individual-city" id="london-city">
+<div class="individual-city">
   <div>
     <h2>${cityTimeZone}</h2>
-    <div class="date">v${cityTime.format("dddd Do MMMM YYYY")}</div>
+    <div class="date">${cityTime.format("dddd Do MMMM YYYY")}</div>
   </div>
-    <div class="time"> ${cityTime.format("HH:mm")} 
+    <div class="time">${cityTime.format("HH:mm")} 
       <span>${cityTime.format("A")}</span></div>
 </div>
-
-<div class="individual-city" id="hk-city">
-    <div>
-  <h2>Hong Kong 🇭🇰</h2>
-  <div class="date">20 November 2023</div>
-  </div>
-  <div class="time">16:50 
-    <span>PM</span></div>
-</div>
-
-<div class="individual-city" id="portugal-city">
-    <div>
-  <h2>Portugual 🇵🇹</h2>
-  <div class="date">20 November 2023</div>
-  </div>
-  <div class="time">09:50 
-    <span>AM</span></div>
-</div>
-
-<div class="individual-city" id="oslo-city">
-    <div>
-  <h2>Olso 🇳🇴</h2>
-  <div class="date">20 November 2023</div>
-  </div>
-  <div class="time">10:50 
-    <span>AM</span></div>
-</div>
-
-
   `;
 }
 
