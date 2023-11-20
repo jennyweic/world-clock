@@ -29,7 +29,7 @@ function showCityClock() {
   let portugalCityElement = document.querySelector("#portugal-city");
   let portugalCityDateElement = portugalCityElement.querySelector(".date");
   let portugalCityTimeElement = portugalCityElement.querySelector(".time");
-  let portugalCityTime = moment().tz("Portugal");
+  let portugalCityTime = moment().tz("Europe/Lisbon");
 
   portugalCityDateElement.innerHTML =
     portugalCityTime.format("dddd Do MMMM YYYY");
@@ -56,6 +56,10 @@ setInterval(showCityClock, 1000);
 function updateCity(event) {
   event.preventDefault;
   let cityTimeZone = event.target.value;
+
+  //improved city name displayed
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+
   console.log(cityTimeZone);
   let cityTime = moment().tz(cityTimeZone);
   console.log(cityTime.format("dddd Do MMMM YYYY"));
@@ -64,7 +68,7 @@ function updateCity(event) {
   citiesElement.innerHTML = `
 <div class="individual-city">
   <div>
-    <h2>${cityTimeZone}</h2>
+    <h2>${cityName}</h2>
     <div class="date">${cityTime.format("dddd Do MMMM YYYY")}</div>
   </div>
     <div class="time">${cityTime.format("HH:mm")} 
