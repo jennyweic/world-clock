@@ -48,6 +48,14 @@ span {
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(43, 55, 226);
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
