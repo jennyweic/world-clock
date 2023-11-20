@@ -57,6 +57,11 @@ function updateCity(event) {
   event.preventDefault;
   let cityTimeZone = event.target.value;
 
+  //find current or local location
+  if (cityTimeZone === "local") {
+    cityTimeZone = moment.tz.guess();
+  }
+
   //improved city name displayed
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
 
